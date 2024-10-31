@@ -1,0 +1,8 @@
+<p>Lista de Itens</p>
+<ul @if="itens$" | async as itens; else loading>
+    <li @for="let item of itens">{{item.nome}}</li>
+</ul>
+
+<ng-template #loading>
+    Carregando...
+</ng-template>
